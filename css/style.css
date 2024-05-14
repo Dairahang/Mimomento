@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap')
+
+span{
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "tipografia logo";
+    src: url(../assets/fonts/);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1{
+    color: #C9ACA4;
+}
+
+.titulos{
+    color: #C9ACA4;
+    font-family: "tipologia logo";
+    font-weight: bolder;
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section.listaordenada{
+    color: black;
+    background-color: #fbf1e9;
+    padding: 25px;
+    margin: 25px;
+    border: 1px solid #C9ACA4;
+    position: relative;
+}
+
+section.fondo-imagen{
+    background-image: url(../assets/img/fondo-inicio.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: beige;
+    display: inline-block;
+}
+
+body{
+    background-color: ghostwhite;
+}
+
+section.texto{
+    text-align: center;
+}
+
+section.servicios-color{
+    color: black;
+    font-weight: lighter;
+    text-align: center;
+}
+
+img{
+    width: 20%;  
+}
+
+iframe{
+    width: 40%;
+}
+
+video{
+    width: 10%;
+}
+
+
+footer.footer{
+    background-color: #fbf1e9;
+}
+
+.fa-brands{
+    font-size: 30px;
+    color: darkslategrey;
+}
+.fa-solid{
+    font-size: 28px;
+    color: darkslategrey;   
+}
+
+/*flex*/
+#conteiner-inicio{
+    background-color:  #fbf1e9;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    color: #fbf1e9;
+}
+
+.items-inicio{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    gap: 40px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+#conteiner.servicio{
+    background-color:  ghostwhite;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.items-servicios{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    gap: 40px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.titulo-nosotros{
+    color: #C9ACA4;
+    font-weight: bolder;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#conteiner-ubicacion{
+    background-color:  ghostwhite;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+div.ubicacion{
+    justify-content: center;
+}
+
+
+/* boxmodel*/
+section.boxModel{
+    background-color: #C9ACA4;
+    padding: 10px;
+    margin: 30px;
+    border: 2px solid;
+    border-radius: 10px 30px;
+}
+
+div.redesSociales{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flex section{
+    width: 250px;
+    display: flex;
+}
+
+section.servicio{
+    padding: 25px;
+    margin: 25px;
+}
+
+
+
+.servicios{
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    grid-template-areas:
+    "box1 box1 box2 box2" 
+    "box3 box3 box4 box4"
+    "box5 box5 box6 box6";
+    padding: 15px;
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+}
+
+.tipos-de-servicios{
+    border: 1px solid  ghostwhite;
+}
+
+.servicio1{
+    grid-area: box1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio2{
+    grid-area: box2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio3{
+    grid-area: box3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio4{
+    grid-area: box4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio5{
+    grid-area: box5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio6{
+    grid-area: box6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/*media queries*/
+/*tablet*/
+@media screen and (max-width: 1024px) {
+    .servicios{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "box1 box1 box2 box2" 
+        "box3 box3 box4 box4" 
+        "box5 box5 box6 box6" ;
+        /* height: 80vh;
+        width: 80vw;
+        margin: auto;*/ 
+    }
+}
+/*mobile*/
+@media screen and (max-width: 768px) {
+    .servicios{
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "box1"
+        "box2"
+        "box3" 
+        "box4"
+        "box5"
+        "box6";
+        row-gap: 10px; 
+    } 
+}
+
+
+
+
+
+        /*PSEUDOCLASES*/
+/*link*/
+.enlace-uno{
+    text-decoration: none;
+
+}
+
+.enlace-uno:link {
+    text-decoration: underline ;
+    color: black;
+}
+
+/* hover*/
+.enlace-dos{
+    color:#C9ACA4;
+    text-decoration: overline;
+}
+.enlace-dos:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+/*visited*/
+.enlace-dos:visited{
+    color: aqua;
+}
+
+/*not*/
+div:not(.enlace-cuatro){
+    font-size: 30px;
+}
+
+/*nt-child*/
+div:nth-child(2){
+    color: bisque;
+}
+
+        /*BOOTSTRAP*/
+/*brackpontis nos define como queremos que reaccione cada columna en los diferentes dispositivos
+xs, sm, md, lg, xl
+12 columnas en la pantalla para breackpoint*/
